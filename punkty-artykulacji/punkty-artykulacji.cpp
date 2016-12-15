@@ -26,8 +26,6 @@ inline void dfs(std::vector <std::vector<int> > &dane,std::vector<bool> &uzyte,s
                 if(czas.at(dane.at(start).at(i))<minimum)
                     minimum=czas.at(dane.at(start).at(i));
             }
-            if(dane.at(start).at(i)==0)
-                korzen=true;
         }
     low.at(start)=minimum;
 }
