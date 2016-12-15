@@ -16,10 +16,10 @@ int main()
             for(int k=j-1;k>=0;k--)
                 if(!deg(points.at(i).first,points.at(i).second,points.at(j).first,points.at(j).second,points.at(k).first,points.at(k).second))
                 {
-                    printf("#ERROR\n");
+                    printf("ERROR\n");
                     return -1;
                 }
     }
-    printf("#OK\n");
+    printf("OK\n");
     return 0;
 }
