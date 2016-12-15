@@ -4,29 +4,29 @@ int time=1;
 int korzen=0;
 inline void dfs(std::vector <std::vector<int> > &dane,std::vector<bool> &uzyte,std::vector <int> &czas,std::vector <int> &low,std::vector<bool> &punkt,int start,int rodzic)
 {
-    if(rodzic==0)
-        korzen++;
     uzyte.at(start)=true;
     czas.at(start)=time;
     int minimum=time;//czas wejscia
     time++;
     for(int i=0;i<dane.at(start).size();i++)
+    {
         if(!uzyte.at(dane.at(start).at(i)))//dziecko
         {
             dfs(dane,uzyte,czas,low,punkt,dane.at(start).at(i),start);
             if(low.at(dane.at(start).at(i))<minimum)
                 minimum=low.at(dane.at(start).at(i));
+            if(start==0)
+                korzen++;
             if(low.at(dane.at(start).at(i))>=czas.at(start))
-                    punkt.at(start)=true;
+                punkt.at(start)=true;
         }
         else
         {
             if(dane.at(start).at(i)!=rodzic)//krawedz powracajaca
-            {
                 if(czas.at(dane.at(start).at(i))<minimum)
                     minimum=czas.at(dane.at(start).at(i));
-            }
         }
+    }
     low.at(start)=minimum;
 }
 int main()

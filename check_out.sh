@@ -6,7 +6,10 @@ for i in */; do
 				echo $k;
 				tmp=$(echo $k | sed 's,/in/,/out/,g');
                                 ./a.out < $k > out;
-				diff out $tmp;
+				tmp=$(diff out $tmp);
+				if [ "$tmp" != "" ]; then
+					exit -1;
+				fi;
                         done;
                 done;
         fi;
