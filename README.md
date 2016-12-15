@@ -1,0 +1,2 @@
+# algorytmy
+Zadania z koła
