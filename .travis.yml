@@ -1,0 +1,8 @@
+language: cpp
+
+compiler:
+  - gcc
+
+script:
+  - ./check_in.sh
+  - ./check_out.sh
