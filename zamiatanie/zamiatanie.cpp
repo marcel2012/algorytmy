@@ -10,9 +10,10 @@ inline int sgn(int wartosc)
 {
     if(wartosc<0)
         return -1;
-    if(wartosc>0)
+    else if(wartosc>0)
         return 1;
-    return 0;
+    else
+        return 0;
 }
 inline int deg(int x1,int y1,int x2,int y2,int x3,int y3)
 {
@@ -64,7 +65,8 @@ int main()
     }
     sort(dane.begin(),dane.end(),sorting);
     std::vector <int> miotla;
-    for(int i=0; i<2*n; i++)
+    bool odp=false;
+    for(int i=0; i<2*n && !odp; i++)
     {
         if(dane.at(i).poczatek)
             if(miotla.size())
@@ -79,10 +81,7 @@ int main()
                     }
                 if(index<miotla.size()-1)
                     if(przecinanie(dane.at(miotla.at(index+1)),dane.at(miotla.at(index))))
-                    {
-                        printf("TRUE\n");
-                        return 0;
-                    }
+                        odp=true;
             }
             else
                 miotla.push_back(i);
@@ -100,6 +99,9 @@ int main()
             miotla.erase(miotla.begin()+index);
         }
     }
-    printf("FALSE\n");
+    if(odp)
+        printf("TRUE\n");
+    else
+        printf("FALSE\n");
     return 0;
 }
