@@ -8,12 +8,7 @@ struct odcinek
 };
 inline int sgn(int wartosc)
 {
-    if(wartosc<0)
-        return -1;
-    else if(wartosc>0)
-        return 1;
-    else
-        return false;
+    return (wartosc<0?-1:(wartosc>0?1:0));
 }
 inline int deg(int x1,int y1,int x2,int y2,int x3,int y3)
 {
