@@ -13,7 +13,7 @@ inline int sgn(int wartosc)
     else if(wartosc>0)
         return 1;
     else
-        return 0;
+        return false;
 }
 inline int deg(int x1,int y1,int x2,int y2,int x3,int y3)
 {
@@ -75,10 +75,7 @@ int main()
                 miotla.insert(miotla.begin()+index,i);
                 if(index>0)
                     if(przecinanie(dane.at(miotla.at(index-1)),dane.at(miotla.at(index))))
-                    {
-                        printf("TRUE\n");
-                        return 0;
-                    }
+                        odp=true;
                 if(index<miotla.size()-1)
                     if(przecinanie(dane.at(miotla.at(index+1)),dane.at(miotla.at(index))))
                         odp=true;
@@ -92,10 +89,7 @@ int main()
                 index++;
             if(index>0 && index<miotla.size()-1)
                 if(przecinanie(dane.at(miotla.at(index-1)),dane.at(miotla.at(index+1))))
-                {
-                    printf("TRUE\n");
-                    return 0;
-                }
+                    odp=true;
             miotla.erase(miotla.begin()+index);
         }
     }
