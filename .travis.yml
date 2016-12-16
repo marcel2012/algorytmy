@@ -1,8 +1,10 @@
 language: cpp
-
 compiler:
   - gcc
-
+before_install:
+  - pip install --user cpp-coveralls
 script:
   - ./check_in.sh
   - ./check_out.sh
+after_success:
+  - coveralls --exclude lib --exclude tests --gcov-options '\-lp'
