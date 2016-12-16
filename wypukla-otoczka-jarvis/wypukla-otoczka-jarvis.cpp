@@ -35,7 +35,7 @@ int main()
                 float a=def(points.at(i1).first,points.at(i1).second,points.at(i2).first,points.at(i2).second,points.at(i3).first,points.at(i3).second);
                 if(a<0)
                     i2=i3;
-                else if(a==0)
+                /*else if(a==0)
                 {
                     //współliniowość punktów - z pitagorasa wybieramy dalszy punkt
                     float pa,pb,pa2,pb2;
@@ -45,7 +45,7 @@ int main()
                     pb2=points.at(i1).second-points.at(i3).second;
                     if(pa*pa+pb*pb<pa2*pa2+pb2*pb2)
                         i2=i3;
-                }
+                }*/
             }
         if(started==-1)
             started=i1;
