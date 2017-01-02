@@ -3,7 +3,6 @@ engines:
     enabled: true
     config:
       check: all
-      project: compile_commands.json
       language: c++
       stds:
         - c++11
@@ -13,7 +12,5 @@ engines:
       - "__cplusplus"
       undefines:
       - "DEBUG"
-      includes:
-      - include/
       max_configs: 42
       inconclusive: false
