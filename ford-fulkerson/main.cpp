@@ -6,21 +6,23 @@ int dfs(std::vector<std::vector<int> > &dane,std::vector<bool> &odwiedzony,std::
 {
     if(start==t)
         return minflow;
+    odwiedzony[start]=true;
+    int maxflow=0;
     for(int i=0;i<dane[start].size();i++)
         if(przeplyw[start][dane[start][i]]>0)
             if(!odwiedzony[dane[start][i]])
             {
-                odwiedzony[dane[start][i]]=true;
-                int maxflow=dfs(dane,odwiedzony,przeplyw,dane[start][i],start,std::min(minflow,przeplyw[start][dane[start][i]]));
-                odwiedzony[dane[start][i]]=false;
-                if(maxflow)
+                int uzyte=std::min(minflow,dfs(dane,odwiedzony,przeplyw,dane[start][i],start,std::min(minflow,przeplyw[start][dane[start][i]])));
+                if(uzyte)
                 {
-                    przeplyw[start][dane[start][i]]-=maxflow;
-                    przeplyw[dane[start][i]][start]+=maxflow;
-                    return maxflow;
+                    przeplyw[start][dane[start][i]]-=uzyte;
+                    przeplyw[dane[start][i]][start]+=uzyte;
+                    minflow-=uzyte;
+                    maxflow+=uzyte;
                 }
             }
-    return 0;
+    odwiedzony[start]=false;
+    return maxflow;
 }
 int main()
 {
@@ -38,7 +40,6 @@ int main()
         przeplyw[a][b]=c;
     }
     scanf("%d%d",&s,&t);
-    odwiedzony[s]=true;
     while(dfs(dane,odwiedzony,przeplyw,s,-1,100000000));
     int wynik=0;
     for(int i=0;i<dane[t].size();i++)
