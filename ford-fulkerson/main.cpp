@@ -6,21 +6,21 @@ int dfs(std::vector<std::vector<int> > &dane,std::vector<bool> &odwiedzony,std::
 {
     if(start==t)
         return minflow;
-    int maxflow=0;
     for(int i=0;i<dane[start].size();i++)
         if(przeplyw[start][dane[start][i]]>0)
             if(!odwiedzony[dane[start][i]])
             {
                 odwiedzony[dane[start][i]]=true;
-                maxflow=dfs(dane,odwiedzony,przeplyw,dane[start][i],start,std::min(minflow,przeplyw[start][dane[start][i]]));
+                int maxflow=dfs(dane,odwiedzony,przeplyw,dane[start][i],start,std::min(minflow,przeplyw[start][dane[start][i]]));
+                odwiedzony[dane[start][i]]=false;
                 if(maxflow)
                 {
                     przeplyw[start][dane[start][i]]-=maxflow;
                     przeplyw[dane[start][i]][start]+=maxflow;
+                    return maxflow;
                 }
-                odwiedzony[dane[start][i]]=false;
             }
-    return maxflow;
+    return 0;
 }
 int main()
 {
