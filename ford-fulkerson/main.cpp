@@ -23,6 +23,8 @@ int dfs(std::vector<std::vector<int> > &sasiedzi,std::vector<bool> &odwiedzony,s
                     przeplyw[sasiedzi[start][i]][start]+=uzyte;
                     minflow-=uzyte;
                     maxflow+=uzyte;
+                    if(!minflow)
+                        break;
                 }
             }
     odwiedzony[start]=false;
@@ -45,6 +47,6 @@ int main()
     }
     scanf("%d%d",&s,&t);
     while(dfs(sasiedzi,odwiedzony,przeplyw,s,-1,100000000));
-    printf("wynik: %d\n",wynik);
+    printf("%d\n",wynik);
     return 0;
 }
