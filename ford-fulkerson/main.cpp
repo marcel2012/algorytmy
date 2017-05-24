@@ -38,6 +38,7 @@ int main()
         przeplyw[a][b]=c;
     }
     scanf("%d%d",&s,&t);
+    odwiedzony[s]=true;
     while(dfs(dane,odwiedzony,przeplyw,s,-1,100000000));
     int wynik=0;
     for(int i=0;i<dane[t].size();i++)
