@@ -1,0 +1,149 @@
+\documentclass[a4paper,12pt,twoside]{book}
+\usepackage[letterpaper, margin=1in]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[MeX]{polski}
+\usepackage[table]{xcolor}
+\usepackage{color}
+\usepackage{latexsym}
+\author{Kacper Nowicki, Marcel Korpal}
+\title{Generacje Komputerów}
+\frenchspacing
+\usepackage{fancyhdr}
+\usepackage{graphicx} 
+ \usepackage{caption}
+\pagestyle{fancy}
+\fancyhf{}
+\makeatletter
+\let\ps@plain\ps@fancy
+\makeatother
+\fancyhead[LE]{\leftmark}
+\fancyhead[RO]{Kacper Nowicki, Marcel Korpal}
+\fancyfoot[C]{\thepage}
+\begin{document}
+\fontfamily{qhv}\selectfont\mdseries
+\maketitle
+\tableofcontents
+\chapter{Zerowa Generacja}
+Komputery zerowej generacji to maszyny konstruowane przed pojawieniem się uniwersalnych, elektronicznych maszyn cyfrowych, o możliwościach dzisiejszych prostych i średnich kalkulatorów programowanych.
+
+Podstawową ich cechą jest brak aktywnych elementów elektronicznych (lamp i tranzystorów). Budowane były na elementach mechanicznych (np. Z1) lub elektromagnetycznych (np. przekaźnikowy Z3\footnote{Przekaźnikowy Z3 to pierwszy działający, w pełni automatyczny komputer o zmiennym programie zbudowany przez niemieckiego inżyniera Konrada Zuse w 1941 roku na bazie jego wcześniejszej, mechanicznej konstrukcji, Z1. Maszyna była wykorzystywana w czasie wojny do obliczeń niezbędnych przy projektowaniu.}). Do budowy próbowano także wykorzystać gotowe arytmometry elektromechaniczne np. maszynę do fakturowania w PARK. 
+\newpage
+\begin{figure}
+\centering
+\includegraphics[width=10cm]1
+\caption{Replika Z1}
+\label{fig:obrazek 1}
+\end{figure}
+
+\chapter{Pierwsza Generacja}
+Komputer pierwszej generacji to komputer zbudowany na lampach elektronowych.
+\newpage
+\begin{figure}
+\centering
+\includegraphics[width=10cm]2
+\caption{XYZ - pierwszy polski komputer}
+\label{fig:obrazek 2}
+\end{figure}
+\chapter{Druga Generacja}
+Komputer drugiej generacji jest to komputer, w którym do budowy elementów logicznych (bramek) wykorzystano elementy półprzewodnikowe – były nimi wynalezione w połowie XX w. tranzystory.
+\newpage
+\begin{figure}
+\centering
+\includegraphics[width=10cm]3
+\caption{Komputer ZAM-41}
+\label{fig:obrazek 3}
+\end{figure}
+
+\chapter{Trzecia Generacja}
+Komputer trzeciej generacji – komputer zbudowany na układach scalonych małej i średniej skali integracji, które zawierały tylko kilka do kilkunastu struktur półprzewodnikowych na jednej płytce. Trzecią generację rozpoczęła seria 360 komputerów przedsiębiorstwa IBM. Komputery te były budowane w latach 1965-1980. Polski komputer trzeciej generacji to Odra 1305.
+\newpage
+
+\begin{figure}
+\centering
+\includegraphics[width=10cm]4
+\caption{Odra 1305}
+\label{fig:obrazek 4}
+\end{figure}
+
+\chapter{Czwarta Generacja}
+Komputer czwartej generacji to komputer zbudowany na układach scalonych wielkiej skali integracji\cite{p1} np. komputer osobisty (PC).
+\newpage
+
+\begin{figure}
+\centering
+\includegraphics[width=10cm]5
+\caption{Podstawowe komponenty komputera osobistego:\\
+1) Monitor\\
+2) płyta główna\\
+3) procesor (CPU)\\
+4) pamięć operacyjna (RAM)\\
+5) karta rozszerzenia\\
+6) zasilacz\\
+7) napęd optyczny (CD, DVD itp.)\\
+8) dysk twardy (HDD)\\
+9) mysz\\
+10) klawiatura\\}
+\label{fig:obrazek 5}
+\end{figure}
+
+\chapter{Piąta Generacja}
+Komputery piątej generacji to projekty o niekonwencjonalnych rozwiązaniach, np. komputer kwantowy.
+\newpage
+
+\begin{figure}
+\centering
+\includegraphics[width=10cm]6
+\caption{Układ skonstruowany przez D-Wave Systems, zrealizowanych za pomocą nadprzewodników}
+\label{fig:obrazek 6}
+\end{figure}
+
+
+
+
+
+
+
+\chapter{Dane}
+
+
+\centering
+\begin{table}[ht]
+\caption{Rok pojawienia się generacji}
+\centering
+\begin{tabular}{|c|c|}
+\hline
+Zerowa Generacja & 1936 \\
+\hline
+Pierwsza Generacja & 1939  \\
+\hline
+Druga Generacja & 1961  \\
+\hline
+Trzecia Generacja & 1965  \\
+\hline
+Czwarta Generacja & 1970  \\
+\hline
+Piąta Generacja & BRAK  \\
+\hline
+\end{tabular}
+\end{table}
+
+
+
+
+
+
+
+\begin{thebibliography}{99}
+\bibitem{p1} Tytuł:
+\emph{Technika. Spojrzenie na dzieje cywilizacji.. Warszawa: PWN, 2003, s. 80.}
+\end{thebibliography}
+
+
+
+\listoffigures
+\addcontentsline{toc}{section}{Spis rysunków}
+
+\listoftables
+
+\end{document}
