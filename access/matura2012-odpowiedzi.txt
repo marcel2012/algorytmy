@@ -1,0 +1,28 @@
+a)
+
+Piotr Bogasiuk
+Anastazja Chojnawiak
+Marcin Chojnik
+Dominik Kaczmarek
+Mariusz Lis
+Katarzyna Weber
+
+b)
+
+fizyka 48
+informatyka 55
+matematyka 38
+
+c)
+
+Krzysztof Peszek
+Maciej Janczak
+
+d)
+
+mężczyźni 110
+kobiety 47
+
+e)
+
+70.96
