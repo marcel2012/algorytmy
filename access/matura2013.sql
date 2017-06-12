@@ -4,7 +4,7 @@ SELECT * FROM "hobby" WHERE SUBSTR( "nazwa", 0, 1 ) = 'k'
 
 b)
 
-SELECT COUNT( * ) FROM "ma_hobby" WHERE "hobby" = ( SELECT "hobby"."hobby" FROM "hobby" WHERE "hobby"."nazwa" = 'majsterkowanie' )
+SELECT DISTINCT idos FROM "ma_hobby" WHERE "hobby" = ( SELECT "hobby"."hobby" FROM "hobby" WHERE "hobby"."nazwa" = 'majsterkowanie' )
 
 c)
 
