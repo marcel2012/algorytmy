@@ -1,0 +1,28 @@
+a)
+
+sezon nazwa
+2010 Australia
+
+b)
+
+Indie
+
+c)
+
+rok imię nazwisko punkty
+2012 Sebastian Vettel 281
+2006 Fernando Alonso 134
+2000 Michael Schumacher 108
+
+d)
+
+Brazylia 2
+Australia 2
+Hiszpania 1
+Wielka Brytania 3
+Francja 2
+Japonia 1
+Finlandia 1
+Niemcy 4
+Wenezuela 1
+Meksyk 1
